@@ -32,7 +32,6 @@ vector<vector<int>> adj_matrix_directed(vector<vector<int>> &edges, int n)
     int v = edge[1];
 
     graph[u][v] = 1;
-    // graph[v][u] = 1;
   }
   return graph;
 }
@@ -71,6 +70,7 @@ void dfs_helper(int src, int n, vector<vector<int>> &graph, vector<bool> &visite
   }
 
 }
+
 void dfs(int src, int n, vector<vector<int>> graph){
   vector<bool> visited(n, false);
   dfs_helper(0, n, graph, visited);
